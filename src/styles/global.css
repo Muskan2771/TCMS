@@ -1,0 +1,7 @@
+.selected-location {
+  @apply bg-red-500 text-white;
+}
+
+.unselected-location {
+  @apply bg-gray-200 text-black;
+}

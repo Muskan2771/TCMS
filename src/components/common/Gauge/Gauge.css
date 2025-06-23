@@ -1,0 +1,46 @@
+.gauge-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gauge {
+  /* Smaller size, no full SVG rotation */
+}
+
+.gauge-background {
+  fill: none;
+  stroke: #e6e6e6; /* Light gray background */
+}
+
+.gauge-fill {
+  fill: none;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 5s; /* Slower animation */
+  transform: rotate(-90deg); /* Rotate only the gauge circle */
+  transform-origin: 50% 50%; /* Set rotation origin to the center of the circle */
+}
+
+.gauge-text {
+  font-size: 16px; /* Smaller text size to match the smaller gauge */
+  fill: #333;
+  dominant-baseline: middle; /* Ensure text is vertically aligned */
+}
+
+.gauge-svg {
+  transform: rotate(-90deg);
+}
+
+.gauge-bg,
+.gauge-progress {
+  fill: none;
+}
+
+.gauge-progress {
+  transition: stroke-dashoffset 5s ease, stroke 5s ease; /* Slower animation */
+}
+
+.gauge-text {
+  font-size: 1rem;
+  fill: #333;
+}

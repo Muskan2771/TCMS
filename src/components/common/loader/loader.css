@@ -1,0 +1,106 @@
+/* loader.css */
+
+.spinnerMain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(0.4px);
+  background: rgba(0, 0, 0, 0.706);
+  z-index: 9999;
+}
+
+.loadingScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingScreen__text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.loadingScreen__text__span {
+  display: inline-block;
+  padding: 4px;
+  animation: charColor 1s infinite ease;
+  animation-delay: calc(100ms * var(--i));
+}
+
+@keyframes charColor {
+  0% {
+    color: #f6be00;
+  }
+  50% {
+    color: #da291c;
+  }
+  100% {
+    color: white;
+  }
+}
+
+.loadingProgress {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.progressBarContainer {
+  width: 80%;
+  max-width: 400px;
+  background-color: #ddd;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progressBar {
+  height: 12px;
+  background-color: #4caf50;
+  width: 0%;
+  transition: width 0.4s ease;
+}
+
+@media (max-width: 600px) {
+  .loadingScreen__text {
+    font-size: 1.5rem;
+  }
+
+  .loadingProgress {
+    font-size: 1rem;
+  }
+
+  .progressBarContainer {
+    width: 90%;
+  }
+}
+/* loader.css */
+
+/* Container for the entire progress bar */
+.progressBarContainer {
+  width: 80%;
+  max-width: 400px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progressBar {
+  height: 12px;
+  width: 0%;
+  background: linear-gradient(90deg, #000000 0%, #323232 50%, #777777 100%);
+  border-radius: 3px;
+  transition: width 0.4s ease-in-out;
+}

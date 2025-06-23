@@ -1,0 +1,30 @@
+.custom-date-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.custom-date-input label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.custom-date-input .form-control {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.custom-date-input .react-datepicker-wrapper {
+  width: 100%;
+}
+
+.custom-date-input .react-datepicker__input-container input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}

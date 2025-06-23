@@ -1,0 +1,59 @@
+.popover-wrapper {
+  position: relative; /* Make sure the wrapper is positioned for absolute positioning inside it */
+  display: inline-block;
+}
+
+.popover-content {
+  z-index: 99999 !important;
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(-50%);
+  pointer-events: none; /* Prevent hover interference */
+  transition:
+    opacity 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
+}
+
+.popover-wrapper:hover .popover-content {
+  opacity: 1; /* Make popover visible on hover */
+  pointer-events: auto; /* Allow interaction */
+}
+
+.popover-right {
+  top: 50%;
+  left: 100%; /* Position the popover to the right */
+  margin-left: 8px;
+}
+
+.popover-left {
+  top: 50%;
+  right: 100%; /* Position the popover to the left */
+  margin-right: 8px;
+}
+
+.popover-top {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%); /* Center the popover above */
+  margin-bottom: 8px;
+}
+
+.popover-bottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%); /* Center the popover below */
+  margin-top: 8px;
+}
+
+.popover-left-top {
+  bottom: 20%;
+  right: -10%;
+  margin-right: 3px;
+}

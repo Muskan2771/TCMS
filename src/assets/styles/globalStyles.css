@@ -1,0 +1,32 @@
+.bg-primary {
+  background-color: #000;
+}
+
+.bg-secondary {
+  background-color: white;
+}
+
+.btn-primary {
+  background-color: #ffb800;
+  color: black;
+}
+
+.btn-secondary {
+  background-color: #e8e9ed;
+  color: black;
+}
+
+.btn-primary:hover {
+  background-color: #f1ad02;
+  color: black;
+}
+
+.btn-secondary:hover {
+  background-color: #d9dade;
+  color: black;
+}
+
+.btn-disabled {
+  background-color: #d9dade;
+  color: black;
+}
