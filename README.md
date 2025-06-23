@@ -1,125 +1,127 @@
-# TCMS
+# Training Course Management System (TCMS)
 
-# Project Structure
+A comprehensive web application for managing training courses, proposals, and customer relationships built with React.js and modern web technologies.
 
-This section outlines the structure of the project files and directories.
+## Features
 
+- User Authentication and Authorization
+- Course Management System
+- Proposal Generation and Management
+- Customer Relationship Management
+- Access Control and Role Management
+- Product and Service Management
+- Terms and Conditions Management
+- Responsive UI with Modern Design
+
+## Tech Stack
+
+- React.js with Vite
+- Tailwind CSS for styling
+- Axios for API calls
+- React Router for navigation
+- Context API for state management
+- Jest for testing
+- SweetAlert2 for notifications
+- Recharts for data visualization
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn package manager
+- Modern web browser
+
+### Installation
+
+1. Clone the repository:
 ```bash
-
-SmartPro-2024-FE/
-├── public/
-│   ├── index.html               # The main HTML file for the application.
-│   └── assets/                  # Directory for static assets.
-│       ├── images/              # Static image files.
-│       ├── styles/              # Global styles.
-│       └── fonts/               # Font files.
-├── src/
-│   ├── assets/                  # Application-specific assets.
-│   │   ├── fonts/               # Fonts used in the application.
-│   │   └── styles/              # CSS or SASS stylesheets.
-│   │       └── globalFont.css   # Global font styles.
-│   ├── components/              # Reusable UI components.
-│   │   ├── common/              # Common components like buttons, inputs, etc.
-│   │   │   ├── alert/           # Alert component.
-│   │   │   ├── buttons/         # Button components.
-│   │   │   ├── containers/      # Container components.
-│   │   │   ├── dropdown/        # Dropdown components.
-│   │   │   ├── icons/           # Icon components.
-│   │   │   ├── loader/          # Loader components.
-│   │   │   ├── modal/           # Modal components.
-│   │   │   ├── table/           # Table components.
-│   │   │   ├── toastify/        # Toast notifications.
-│   │   └── layout/              # Layout components.
-│   │       ├── Navbar.jsx       # Navbar component.
-│   │       └── NotAuthorized.jsx# Unauthorized access component.
-│   │   └── ui/                  # UI-specific components.
-│   │       ├── PageNotFound.jsx # 404 Page component.
-│   │       └── UnderDev.jsx     # Under Development component.
-│   ├── config/                  # Configuration files.
-│   │   ├── NavIconConfig.js     # Navigation icons configuration.
-│   │   ├── TableConfig.js       # Table configuration.
-│   ├── context/                 # Context providers for state management.
-│   │   ├── accessContext/       # Access-related context.
-│   │   │   ├── AccessContext.js
-│   │   │   └── AccessContextProvider.jsx
-│   │   ├── alternateProductContext/
-│   │   │   ├── AlternateProductContext.js
-│   │   │   └── AlternateProductContextProvider.jsx
-│   │   ├── authContext/
-│   │   │   ├── AuthContext.js
-│   │   │   └── AuthContextProvider.jsx
-│   │   ├── customerContext/
-│   │   │   ├── CustomerContext.js
-│   │   │   └── CustomerContextProvider.jsx
-│   │   ├── offersContext/
-│   │   │   ├── OfferContext.js
-│   │   │   └── OfferContextProvider.jsx
-│   │   ├── productContext/
-│   │   │   ├── ProductContext.js
-│   │   │   └── ProductContextProvider.jsx
-│   │   ├── proposalContext/
-│   │   │   ├── ProposalContext.js
-│   │   │   └── ProposalContextProvider.jsx
-│   │   ├── roleContext/
-│   │   │   ├── RoleContext.js
-│   │   │   └── RoleContextProvider.jsx
-│   │   ├── serviceContext/
-│   │   │   ├── ServiceContext.js
-│   │   │   └── ServiceContextProvider.jsx
-│   │   ├── termsAndConditionContext/
-│   │   │   ├── TermsAndConditionContext.js
-│   │   │   └── TermsAndConditionContextProvider.jsx
-│   │   ├── userContext/
-│   │   │   ├── UserContext.js
-│   │   │   └── UserContextProvider.jsx
-│   ├── pages/                   # Main pages of the application.
-│   │   ├── view-proposal/        # View proposal page.
-│   │   ├── setting/              # Setting-related pages.
-│   │   │   ├── access-privilege/
-│   │   │   ├── alternate-product/
-│   │   │   ├── customer/
-│   │   │   ├── offers/
-│   │   │   ├── product/
-│   │   │   ├── services/
-│   │   │   └── terms-and-conditions/
-│   ├── routing/                 # Routing files.
-│   │   ├── PrivateRoute.jsx     # Private route component.
-│   ├── services/                # Service files for API calls, authentication, etc.
-│   │   ├── accessControlService.js # API service for access control.
-│   │   ├── alternateProductService.js # API service for alternate products.
-│   │   ├── authService.js       # API service for authentication.
-│   │   ├── customerService.js   # API service for customers.
-│   │   ├── offerService.js      # API service for offers.
-│   │   ├── productGroupService.js # API service for product groups.
-│   │   └── ProductService.js    # API service for products.
-│   ├── utils/                   # Utility functions and constants.
-│   │   ├── axiosInstance.js     # Axios instance for HTTP requests.
-│   │   ├── checkSession.js      # Session check utility.
-│   │   ├── debounce.js          # Debounce utility.
-│   │   ├── disableConsoleLogs.js # Utility to disable console logs in production.
-│   │   ├── LoadingUtil.jsx      # Loading utility component.
-│   │   ├── SessionExpiredAlert.jsx # Alert component for session expiry.
-│   │   ├── throttle.js          # Throttle utility function.
-│   │   └── validateForm.js      # Form validation utility.
-│   ├── App.js                   # Main App component.
-│   ├── App.css                  # Global app styles.
-│   ├── index.js                 # Entry point for the React application.
-│   ├── main.jsx                 # Main JSX file.
-│   ├── Layout.jsx               # Layout component file.
-│   ├── temp.json                # Temporary configuration file.
-│   ├── babelrc                  # Babel configuration file.
-├── .gitignore                   # Specifies files to be ignored by Git.
-├── README.md                    # Project documentation.
-└── yarn.lock / package-lock.json # Lock file for package managers.
-
+git clone https://github.com/yourusername/TCMS.git
 ```
 
-Each file and directory in the project serves a specific purpose, ensuring a well-organized and maintainable codebase.
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-## API Endpoints Used in Context
+3. Set up environment variables:
+- Copy `.env.development` and `.env.production` to your environment files
+- Update the configuration as needed
 
-For more detailed API documentation, refer to [APIDOCK.md](./APIDOCK.md).
+### Running the Application
 
-## Proposal Calculation
+Development mode:
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-For more detailed documentation, refer to [calculationDocumentation.md](docs/calculationDocumentation.md).
+Production mode:
+```bash
+npm run dev:prod
+# or
+yarn dev:prod
+```
+
+### Building for Production
+
+```bash
+npm run build:prod
+# or
+yarn build:prod
+```
+
+## Project Structure
+
+```bash
+TCMS/
+├── public/                      # Static assets
+├── src/
+│   ├── assets/                 # Application assets
+│   ├── components/             # Reusable React components
+│   ├── config/                 # Application configuration
+│   ├── context/                # React Context providers
+│   ├── pages/                  # Application pages
+│   ├── routing/                # Route configuration
+│   ├── services/               # API services
+│   └── utils/                  # Utility functions
+├── .env.development            # Development environment variables
+├── .env.production             # Production environment variables
+└── package.json                # Project dependencies and scripts
+```
+
+## API Documentation
+
+For detailed API documentation, please refer to [APIDOCK.md](./APIDOCK.md).
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details
+
+## Support
+
+For support, please:
+- Open an issue in the GitHub repository
+- Contact the development team directly
+- Check the documentation in the docs directory
+
+## Acknowledgments
+
+- Thanks to all contributors and users
+- Special thanks to the React community and open-source contributors
+- Built with modern web development tools and best practices
+
+---
+
+For more detailed documentation, refer to the documentation files in the docs directory.
